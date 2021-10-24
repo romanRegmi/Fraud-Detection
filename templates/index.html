@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+    <title>Fraud Detection</title>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <div class="login">
+        <h1>Check For Fraud</h1>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict') }}" method="POST">
+
+            <input type="text" name="step"     placeholder="STEP" required="required" />
+            <input type="text" name="customer" placeholder="CUSTOMER" required="required" />
+            <input type="text" name="merchant" placeholder="MERCHANT" required="required" />
+           
+
+            <select name="gender" required="required">
+                <option value="" disabled selected>GENDER</option>
+                <option value="'M'">Male</option>
+                <option value="'F'">Female</option>
+                <option value="'E'">Enterprise</option>
+                <option value="'U'">Unknown</option>
+            </select>
+
+            <select name="age" required="required">
+                <option value="" disabled selected>AGE</option>
+                <option value="'0'">0-18</option>
+                <option value="'1'">19-25</option>
+                <option value="'2'">26-35</option>
+                <option value="'3'">36-45</option>
+                <option value="'4'">46-55</option>
+                <option value="'5'">56-65</option>
+                <option value="'6'">65</option>
+                <option value="'U'">Unknown</option>
+            </select>
+
+
+            <select name="category" required="required">
+                <option value="" disabled selected>CATEGORY</option>
+                <option value="'es_health'">'es_health'</option>
+                <option value="'es_otherservices'">'es_otherservices'</option>
+                <option value="'es_hotelservices'">'es_hotelservices'</option>
+                <option value="'es_wellnessandbeauty'">'es_wellnessandbeauty'</option>
+                <option value="'es_hyper'">'es_hyper'</option>
+                <option value="'es_fashion'">'es_fashion'</option>
+                <option value="'es_home'">'es_home'</option>
+                <option value="'es_travel'">'es_travel'</option>
+                <option value="'es_leisure'">'es_leisure'</option>
+                <option value="'es_sportsandtoys'">'es_sportsandtoys'</option>
+                <option value="'es_barsandrestaurants'">'es_barsandrestaurants'</option>
+                <option value="'es_tech'">'es_tech'</option>
+            </select>
+
+            <input type="text" name="amount"   placeholder="AMOUNT" required="required" />
+
+
+            
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict Fraud</button>
+        </form>
+
+        <br>
+        <br>
+        {{ prediction_text }}
+
+    </div>
+
+
+</body>
+
+</html>

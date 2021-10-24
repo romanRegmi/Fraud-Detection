@@ -1,0 +1,3 @@
+23/10/2021 10:06:09 CATEGORIES : [es_contents, es_food, es_transportation] REMOVED FROM DATA
+23/10/2021 10:06:09 FEATURES : [zipcodeOri, zipMerchant] REMOVED FROM DATA
+23/10/2021 10:06:09 NEW CSV FILE CREATED

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/romanregmi/Desktop/Money%20Laundering/src/mlruns/0/decf129d7d6e47769b18d60360eb78ed/artifacts
+end_time: 1634990572556
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: decf129d7d6e47769b18d60360eb78ed
+run_uuid: decf129d7d6e47769b18d60360eb78ed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1634990567074
+status: 3
+tags: []
+user_id: romanregmi
