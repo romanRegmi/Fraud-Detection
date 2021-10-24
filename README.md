@@ -76,5 +76,7 @@ It is important to note that the data is **Synthetic**(fake) as it was generated
 
 In the application, evey field must be given an appropriate input. For instance, the **MERCHANT** and **CUSTOMER** input must be from the original dataset(They are categorical). New data will throw an error for it will not have the appropriate encoding. 
 
+The web app link is given [here](https://bank-sim-api.herokuapp.com/).
+
 ## Contributors
 Roman Regmi
